@@ -32,13 +32,16 @@ The agent receives a reward of +1 for reaching the goal state (G). The agent rec
 ## SARSA LEARNING ALGORITHM
 1. Initialize the Q-values arbitrarily for all state-action pairs.
 2. Repeat for each episode:
+
  I. Initialize the starting state.
- II. Repeat for each step of episode:
+ II. Repeat for each step of episode
+ 
     a. Choose action from state using policy derived from Q (e.g., epsilon-greedy).
     b. Take action, observe reward and next state.
     c. Choose action from next state using policy derived from Q (e.g., epsilon-greedy).
     d. Update Q(s, a) := Q(s, a) + alpha * [R + gamma * Q(s', a') - Q(s, a)]
     e. Update the state and action.
+    
 4. Until state is terminal.
 5. Until performance converges.
 
